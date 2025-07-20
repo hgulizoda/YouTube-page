@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.937);
+    color: white;
+    padding: 20px 32px 0 32px;
+}
+
+.container {
+    max-width: 1500px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px 15px;
+}
+
+.card {
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.cover {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    margin-bottom: 12px;
+    transition: all 0.4s;
+
+}
+
+.acc {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+
+
+
+.acc img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+h3 {
+    width: 90%;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: clamp(10px, 12px, 20px);
+    line-height: 100%;
+    margin-bottom: 6px;
+}
+
+.relative {
+    position: relative;
+
+}
+
+.acc p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #AAA;
+}
+
+.position {
+    position: absolute;
+    right: 3%;
+    bottom: 10%;
+    background-color: #000000;
+    padding: 3px 4px;
+    font-size: 10px;
+}
+
+.card:hover .cover {
+    animation: fade-up;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: 0.2s;
+}
+
+@keyframes fade-up {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
